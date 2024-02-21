@@ -33,11 +33,17 @@ const Accordion = () => {
                         <h3>{dataItem.question}</h3>
                         <span>+</span>
                         <div>
-                         
+                            {
+                                multiple.indexOf(dataItem.id) !== -1 ? <div>
+                                    {dataItem.answer} </div>: null
+                            }
+
                             {selected === dataItem.id? <div>
                             {dataItem.answer}
                             </div>: null
-                            }</div>
+                            }
+                            
+                        </div>
                     </div>
                     
 
